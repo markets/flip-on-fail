@@ -1,5 +1,5 @@
 {
-  "name": "flipout",
+  "name": "flip-out",
   "version": "1.0.0",
   "description": "Add expressive ASCII art prefixes to your JavaScript error messages",
   "main": "index.js",
@@ -9,8 +9,8 @@
   },
   "keywords": [
     "error",
-    "table-flip",
     "exception",
+    "table-flip",
     "ascii-art"
   ],
   "author": "Marc Anguera Insa @markets",

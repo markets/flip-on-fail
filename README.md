@@ -10,18 +10,14 @@ npm install flipout
 
 ## Usage
 
+### ES Modules (Recommended)
+
 ```javascript
 // Import the package at the entry point of your application
-import flipout from 'flipout';
+import flipOut from 'flipout';
 
 // Will throw: (╯°□°)╯︵ ┻━┻ This is an error!
 throw new Error('This is an error!');
-```
-
-You can also import specific functions:
-
-```javascript
-import { setPrefix, enable, disable } from 'flipout';
 ```
 
 ### Customizing the prefix
@@ -29,10 +25,10 @@ import { setPrefix, enable, disable } from 'flipout';
 You can set a custom prefix for your error messages:
 
 ```javascript
-import flipout from 'flipout';
+import flipOut from 'flipout';
 
 // Set a custom prefix
-flipout.setPrefix('¯\\_(ツ)_/¯');
+flipOut.setPrefix('¯\\_(ツ)_/¯');
 
 // Will throw: ¯\_(ツ)_/¯ This is an error!
 throw new Error('This is an error!');
@@ -43,16 +39,16 @@ throw new Error('This is an error!');
 You can temporarily disable or re-enable error flipping:
 
 ```javascript
-import flipout from 'flipout';
+import flipOut from 'flipout';
 
 // Disable error flipping
-flipout.disable();
+flipOut.disable();
 
 // Will throw: This is an error! (without prefix)
 throw new Error('This is an error!');
 
 // Re-enable error flipping
-flipout.enable();
+flipOut.enable();
 
 // Will throw: (╯°□°)╯︵ ┻━┻ This is an error!
 throw new Error('This is an error!');
