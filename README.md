@@ -1,20 +1,26 @@
-# FlipOut.js
+# Flip Out
 
-A modern JavaScript package that adds fun prefixes to error messages, inspired by the Ruby gem [table_flipper](https://github.com/iridakos/table_flipper). Turn your boring errors into expressive outbursts!
+> Turn your boring errors into expressive outbursts (╯°□°)╯︵ ┻━┻
+
+A JavaScript package that adds fun prefixes to error messages.
 
 ## Installation
 
 ```bash
-npm install flipout
+npm install flip-out
+```
+
+Or using Yarn:
+
+```bash
+yarn add flip-out
 ```
 
 ## Usage
 
-### ES Modules (Recommended)
-
 ```javascript
 // Import the package at the entry point of your application
-import flipOut from 'flipout';
+import flipOut from 'flip-out';
 
 // Will throw: (╯°□°)╯︵ ┻━┻ This is an error!
 throw new Error('This is an error!');
@@ -25,12 +31,12 @@ throw new Error('This is an error!');
 You can set a custom prefix for your error messages:
 
 ```javascript
-import flipOut from 'flipout';
+import flipOut from 'flip-out';
 
 // Set a custom prefix
-flipOut.setPrefix('¯\\_(ツ)_/¯');
+flipOut.setPrefix('💥');
 
-// Will throw: ¯\_(ツ)_/¯ This is an error!
+// Will throw: 💥 This is an error!
 throw new Error('This is an error!');
 ```
 
@@ -39,7 +45,7 @@ throw new Error('This is an error!');
 You can temporarily disable or re-enable error flipping:
 
 ```javascript
-import flipOut from 'flipout';
+import flipOut from 'flip-out';
 
 // Disable error flipping
 flipOut.disable();
@@ -54,7 +60,7 @@ flipOut.enable();
 throw new Error('This is an error!');
 ```
 
-## Supported Error Types
+### Supported Error Types
 
 The package modifies messages for the following error types:
 - `Error`
@@ -62,6 +68,11 @@ The package modifies messages for the following error types:
 - `SyntaxError`
 - `ReferenceError`
 - `RangeError`
+
+## Acknowledgements
+
+- This project was inspired by the [table_flipper](https://github.com/iridakos/table_flipper) Ruby gem.
+- This project was pair-progammed with Copilot and Claude 3.7 Sonnet.
 
 ## License
 

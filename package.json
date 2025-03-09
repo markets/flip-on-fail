@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "ava --experimental-modules"
+    "test": "ava"
   },
   "keywords": [
     "error",
@@ -16,6 +16,6 @@
   "author": "Marc Anguera Insa @markets",
   "license": "MIT",
   "devDependencies": {
-    "ava": "^5.3.1"
+    "ava": "^6.2.0"
   }
 }
