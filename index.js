@@ -97,9 +97,9 @@ enable()
 
 // Export public API
 export default {
+  config,
   enable,
   disable,
   setPrefix,
-  resetPrefix,
-  config
+  resetPrefix
 }

@@ -82,8 +82,12 @@ The package modifies messages for the following error types:
 ## Acknowledgements
 
 - This project was inspired by the [table_flipper](https://github.com/iridakos/table_flipper) Ruby gem.
-- This project was pair-progammed with Copilot and Claude 3.7 Sonnet.
+- This project was pair-progammed with `Copilot` and `Claude 3.7 Sonnet`.
+
+## Disclaimer
+
+This project is intended as a light-hearted joke and should be used for fun. It adds a bit of humor, but please do not take it too seriously. Feel free to use it to bring some joy and laughter into your coding sessions!
 
 ## License
 
-Copyright (c) Marc Anguera Insa. SuchTube is released under the [MIT License](LICENSE).
+Copyright (c) Marc Anguera Insa. Flip Out is released under the [MIT License](LICENSE).
