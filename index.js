@@ -88,7 +88,7 @@ const setPrefix = (newPrefix = DEFAULT_FLIP) => {
 }
 
 // Function to reset the prefix with the default flip
-const resetPrefix = (newPrefix = DEFAULT_FLIP) => {
+const resetPrefix = () => {
   setPrefix(DEFAULT_FLIP)
 }
 
