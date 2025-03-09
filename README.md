@@ -20,10 +20,10 @@ yarn add flip-out
 
 ```javascript
 // Import the package at the entry point of your application
-import flipOut from 'flip-out';
+import flipOut from 'flip-out'
 
 // Will throw: (╯°□°)╯︵ ┻━┻ This is an error!
-throw new Error('This is an error!');
+throw new Error('This is an error!')
 ```
 
 ### Customizing the prefix
@@ -31,13 +31,18 @@ throw new Error('This is an error!');
 You can set a custom prefix for your error messages:
 
 ```javascript
-import flipOut from 'flip-out';
-
 // Set a custom prefix
-flipOut.setPrefix('💥');
+flipOut.setPrefix('💥')
 
 // Will throw: 💥 This is an error!
-throw new Error('This is an error!');
+throw new Error('This is an error!')
+```
+
+You can also reset the default prefix by:
+
+```javascript
+// Set a custom prefix
+flipOut.resetPrefix()
 ```
 
 ### Disabling/Enabling
@@ -45,19 +50,17 @@ throw new Error('This is an error!');
 You can temporarily disable or re-enable error flipping:
 
 ```javascript
-import flipOut from 'flip-out';
-
 // Disable error flipping
-flipOut.disable();
+flipOut.disable()
 
 // Will throw: This is an error! (without prefix)
-throw new Error('This is an error!');
+throw new Error('This is an error!')
 
 // Re-enable error flipping
-flipOut.enable();
+flipOut.enable()
 
 // Will throw: (╯°□°)╯︵ ┻━┻ This is an error!
-throw new Error('This is an error!');
+throw new Error('This is an error!')
 ```
 
 ### Supported Error Types

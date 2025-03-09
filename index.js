@@ -1,22 +1,22 @@
 // Default ASCII art for table flipping
 const DEFAULT_FLIP = '(╯°□°)╯︵ ┻━┻'
 
+// Configuration object
+const config = {
+  prefix: DEFAULT_FLIP,
+  enabled: true
+}
+
+// Determine the global object (works in browser and Node.js)
+const globalObject = typeof window !== 'undefined' ? window :
+                     typeof global !== 'undefined' ? global : this
+
 // Store the original Error constructor
 const OriginalError = Error
 const OriginalTypeError = TypeError
 const OriginalSyntaxError = SyntaxError
 const OriginalReferenceError = ReferenceError
 const OriginalRangeError = RangeError
-
-// Determine the global object (works in browser and Node.js)
-const globalObject = typeof window !== 'undefined' ? window :
-                     typeof global !== 'undefined' ? global : this
-
-// Configuration object
-const config = {
-  prefix: DEFAULT_FLIP,
-  enabled: true
-}
 
 // Factory to create error constructor overrides using arrow function
 const createErrorWrapper = (OriginalErrorType) => {
@@ -87,6 +87,11 @@ const setPrefix = (newPrefix = DEFAULT_FLIP) => {
   config.prefix = newPrefix
 }
 
+// Function to reset the prefix with the default flip
+const resetPrefix = (newPrefix = DEFAULT_FLIP) => {
+  setPrefix(DEFAULT_FLIP)
+}
+
 // Initialize by enabling the flipper
 enable()
 
@@ -94,5 +99,6 @@ export default {
   enable,
   disable,
   setPrefix,
-  DEFAULT_FLIP
+  resetPrefix,
+  config
 }

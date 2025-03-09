@@ -3,7 +3,7 @@ import flipOut from './index.js'
 
 // Helper to reset state before each test
 test.beforeEach(() => {
-  flipOut.setPrefix('(╯°□°)╯︵ ┻━┻')
+  flipOut.resetPrefix()
   flipOut.enable()
 })
 
@@ -41,8 +41,8 @@ test('Error flipper can be re-enabled after being disabled', t => {
   flipOut.disable()
 
   // Then re-enable
-  flipOut.setPrefix('(╯°□°)╯︵ ┻━┻') // try to remove
   flipOut.enable()
+  flipOut.resetPrefix() // NOTE: this shouldn't be necessary
 
   try {
     throw new Error('This is a test error after re-enabling!')
