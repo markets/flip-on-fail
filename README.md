@@ -44,6 +44,8 @@ If you like the original ASCII art, here are some alternative "table flippers" y
 - ┻━┻ ︵ヽ(`Д´)ﾉ︵ ┻━┻
 - (┛ಠ_ಠ)┛彡 ┻━┻
 - (/¯◡ ‿ ◡)/¯ ~ ┻━┻
+- (┛◉Д◉)┛彡 ┻━┻
+- (╯°.°）╯ ┻━┻
 
 You can also reset to the default prefix by:
 
@@ -82,7 +84,7 @@ The package modifies messages for the following error types:
 ## Acknowledgements
 
 - This project was inspired by the [table_flipper](https://github.com/iridakos/table_flipper) Ruby gem.
-- This project was pair-progammed with `Copilot` and `Claude 3.7 Sonnet`.
+- This project was pair-progammed with `Copilot` and the `Claude 3.7 Sonnet` model.
 
 ## Disclaimer
 
