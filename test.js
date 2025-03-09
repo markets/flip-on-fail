@@ -52,28 +52,24 @@ test('Error flipper can be re-enabled after being disabled', t => {
 })
 
 test('Different error types are modified with prefix', t => {
-  // Test TypeError
   try {
     throw new TypeError('This is a type error!')
   } catch (e) {
     t.is(e.message, '(╯°□°)╯︵ ┻━┻ This is a type error!')
   }
 
-  // Test SyntaxError
   try {
     throw new SyntaxError('This is a syntax error!')
   } catch (e) {
     t.is(e.message, '(╯°□°)╯︵ ┻━┻ This is a syntax error!')
   }
 
-  // Test ReferenceError
   try {
     throw new ReferenceError('This is a reference error!')
   } catch (e) {
     t.is(e.message, '(╯°□°)╯︵ ┻━┻ This is a reference error!')
   }
 
-  // Test RangeError
   try {
     throw new RangeError('This is a range error!')
   } catch (e) {
