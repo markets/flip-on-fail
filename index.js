@@ -95,6 +95,7 @@ const resetPrefix = (newPrefix = DEFAULT_FLIP) => {
 // Initialize by enabling the flipper
 enable()
 
+// Export public API
 export default {
   enable,
   disable,

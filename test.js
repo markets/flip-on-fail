@@ -3,8 +3,8 @@ import flipOut from './index.js'
 
 // Helper to reset state before each test
 test.beforeEach(() => {
-  flipOut.resetPrefix()
   flipOut.enable()
+  flipOut.resetPrefix()
 })
 
 test('Default prefix is added to error messages', t => {
@@ -42,7 +42,7 @@ test('Error flipper can be re-enabled after being disabled', t => {
 
   // Then re-enable
   flipOut.enable()
-  flipOut.resetPrefix() // NOTE: this shouldn't be necessary
+  flipOut.resetPrefix()
 
   try {
     throw new Error('This is a test error after re-enabling!')

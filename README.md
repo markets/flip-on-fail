@@ -38,7 +38,14 @@ flipOut.setPrefix('💥')
 throw new Error('This is an error!')
 ```
 
-You can also reset the default prefix by:
+If you like the original ASCII art, here are some alternative "table flippers" you can also use:
+- (ﾉಥ益ಥ）ﾉ ┻━┻
+- (╯'□')╯︵ ┻━┻
+- ┻━┻ ︵ヽ(`Д´)ﾉ︵ ┻━┻
+- (┛ಠ_ಠ)┛彡 ┻━┻
+- (/¯◡ ‿ ◡)/¯ ~ ┻━┻
+
+You can also reset to the default prefix by:
 
 ```javascript
 // Set a custom prefix

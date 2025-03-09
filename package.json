@@ -1,7 +1,7 @@
 {
   "name": "flip-out",
   "version": "1.0.0",
-  "description": "Turn your boring errors into expressive outbursts!",
+  "description": "Turn your boring errors into expressive outbursts (╯°□°)╯︵ ┻━┻",
   "type": "module",
   "scripts": {
     "test": "ava"
