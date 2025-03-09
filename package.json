@@ -1,8 +1,7 @@
 {
   "name": "flip-out",
   "version": "1.0.0",
-  "description": "Add expressive ASCII art prefixes to your JavaScript error messages",
-  "main": "index.js",
+  "description": "Turn your boring errors into expressive outbursts!",
   "type": "module",
   "scripts": {
     "test": "ava"
