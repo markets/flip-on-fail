@@ -4,7 +4,7 @@
 
 A JavaScript package that adds fun prefixes to error messages. Designed to run seamlessly in both browser environments and Node.js.
 
-## Installation
+## ⚙️ Installation
 
 ```bash
 npm install flip-on-fail
@@ -16,7 +16,7 @@ Or using Yarn:
 yarn add flip-on-fail
 ```
 
-## Usage
+## 📚 Usage
 
 ```javascript
 // Import the package at the entry point of your application
@@ -72,16 +72,16 @@ flip.enable()
 throw new Error('This is an error!')
 ```
 
-## Acknowledgements
+## 🙇 Acknowledgements
 
 - This project was inspired by the [table_flipper](https://github.com/iridakos/table_flipper) Ruby gem.
 - This project was pair-programmed with `Copilot` and the `Claude 3.7 Sonnet` model.
 
-## Disclaimer
+## 👀 Disclaimer
 
 This project is intended as a light-hearted joke and should be used for fun. It adds a bit of humor, but please do not take it too seriously. Feel free to use it to bring some joy and laughter into your coding sessions! Remember, even your code needs a break sometimes, so let it flip out!
 
-## Contributing
+## 🤝 Contributing
 
 (╯°□°)╯︵ ┻━┻ CONTRIBUTIONS? BRING 'EM ON!
 
@@ -91,8 +91,8 @@ We welcome all contributions, whether it's bug fixes or new features. Don't forg
 npm test
 ```
 
-Thanks for contributing! Now go fix some errors! ┻━┻ ︵ ¯\(ツ)/¯ ︵ ┻━┻
+Thanks for contributing! Now go fix some errors! ┻━┻ ︵ ¯\\(ツ)/¯ ︵ ┻━┻
 
-## License
+## 📜 License
 
 Copyright (c) Marc Anguera Insa. `Flip On Fail` is released under the [MIT License](LICENSE).
