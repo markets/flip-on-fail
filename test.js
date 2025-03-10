@@ -26,6 +26,17 @@ test('Custom prefix is added to error messages', t => {
   }
 })
 
+test('Empty prefix falls back to default', t => {
+  flip.setPrefix('💥')
+  flip.resetPrefix()
+
+  try {
+    throw new Error('This is a test error!')
+  } catch (e) {
+    t.is(e.message, '(╯°□°)╯︵ ┻━┻ This is a test error!')
+  }
+})
+
 test('Error flipper can be disabled', t => {
   flip.disable()
 
@@ -80,15 +91,5 @@ test('Different error types are modified with prefix', t => {
     throw new URIError('This is a uri error!')
   } catch (e) {
     t.is(e.message, '(╯°□°)╯︵ ┻━┻ This is a uri error!')
-  }
-})
-
-test('Empty prefix falls back to default', t => {
-  flip.setPrefix()
-
-  try {
-    throw new Error('This is a test error!')
-  } catch (e) {
-    t.is(e.message, '(╯°□°)╯︵ ┻━┻ This is a test error!')
   }
 })
