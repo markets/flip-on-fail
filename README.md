@@ -72,15 +72,6 @@ flipOut.enable()
 throw new Error('This is an error!')
 ```
 
-### Supported Error Types
-
-The package modifies messages for the following error types:
-- `Error`
-- `TypeError`
-- `SyntaxError`
-- `ReferenceError`
-- `RangeError`
-
 ## Acknowledgements
 
 - This project was inspired by the [table_flipper](https://github.com/iridakos/table_flipper) Ruby gem.

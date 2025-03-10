@@ -75,6 +75,12 @@ test('Different error types are modified with prefix', t => {
   } catch (e) {
     t.is(e.message, '(╯°□°)╯︵ ┻━┻ This is a range error!')
   }
+
+  try {
+    throw new URIError('This is a uri error!')
+  } catch (e) {
+    t.is(e.message, '(╯°□°)╯︵ ┻━┻ This is a uri error!')
+  }
 })
 
 test('Empty prefix falls back to default', t => {

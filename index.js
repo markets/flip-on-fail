@@ -17,6 +17,7 @@ const OriginalTypeError = TypeError
 const OriginalSyntaxError = SyntaxError
 const OriginalReferenceError = ReferenceError
 const OriginalRangeError = RangeError
+const OriginalURIError = URIError
 
 // Factory to create error constructor overrides using arrow function
 const createErrorWrapper = (OriginalErrorType) => {
@@ -59,6 +60,7 @@ const WrappedTypeError = createErrorWrapper(OriginalTypeError)
 const WrappedSyntaxError = createErrorWrapper(OriginalSyntaxError)
 const WrappedReferenceError = createErrorWrapper(OriginalReferenceError)
 const WrappedRangeError = createErrorWrapper(OriginalRangeError)
+const WrappedURIError = createErrorWrapper(OriginalURIError)
 
 // Function to enable the error flipper
 const enable = () => {
@@ -69,6 +71,7 @@ const enable = () => {
   globalObject.SyntaxError = WrappedSyntaxError
   globalObject.ReferenceError = WrappedReferenceError
   globalObject.RangeError = WrappedRangeError
+  globalObject.URIError = WrappedURIError
 }
 
 // Function to disable the error flipper
@@ -80,6 +83,7 @@ const disable = () => {
   globalObject.SyntaxError = OriginalSyntaxError
   globalObject.ReferenceError = OriginalReferenceError
   globalObject.RangeError = OriginalRangeError
+  globalObject.URIError = OriginalURIError
 }
 
 // Function to customize the prefix with default parameter
