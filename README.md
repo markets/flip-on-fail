@@ -38,7 +38,7 @@ flip.setPrefix('💥')
 throw new Error('This is an error!')
 ```
 
-If you like the original ASCII art, here are some alternative "table flippers" you can also use:
+If you like the original ASCII art, here are some alternative "table flippers" for inspiration:
 - (ﾉಥ益ಥ）ﾉ ┻━┻
 - (╯'□')╯︵ ┻━┻
 - ┻━┻ ︵ヽ(`Д´)ﾉ︵ ┻━┻
@@ -80,6 +80,18 @@ throw new Error('This is an error!')
 ## Disclaimer
 
 This project is intended as a light-hearted joke and should be used for fun. It adds a bit of humor, but please do not take it too seriously. Feel free to use it to bring some joy and laughter into your coding sessions! Remember, even your code needs a break sometimes, so let it flip out!
+
+## Contributing
+
+(╯°□°)╯︵ ┻━┻ CONTRIBUTIONS? BRING 'EM ON!
+
+We welcome all contributions, whether it's bug fixes or new features. Don't forget to add tests for behaviour changes and run the test suite by:
+
+```bash
+npm test
+```
+
+Thanks for contributing! Now go fix some errors! ┻━┻ ︵ ¯\(ツ)/¯ ︵ ┻━┻
 
 ## License
 
