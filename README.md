@@ -62,7 +62,7 @@ You can temporarily disable or re-enable error flipping:
 // Disable error flipping
 flip.disable()
 
-// Will throw: This is an error! (without prefix)
+// Will throw: This is an error!
 throw new Error('This is an error!')
 
 // Re-enable error flipping

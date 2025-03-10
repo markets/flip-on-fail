@@ -19,7 +19,7 @@ const OriginalReferenceError = ReferenceError
 const OriginalRangeError = RangeError
 const OriginalURIError = URIError
 
-// Factory to create error constructor overrides using arrow function
+// Factory to create error constructor overrides
 const createErrorWrapper = (OriginalErrorType) => {
   function WrappedError(...args) {
     // Create an instance of the original Error type
