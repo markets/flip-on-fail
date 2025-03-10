@@ -1,10 +1,10 @@
 import test from 'ava'
-import flipOut from './index.js'
+import flip from './index.js'
 
 // Helper to reset state before each test
 test.beforeEach(() => {
-  flipOut.enable()
-  flipOut.resetPrefix()
+  flip.enable()
+  flip.resetPrefix()
 })
 
 test('Default prefix is added to error messages', t => {
@@ -17,7 +17,7 @@ test('Default prefix is added to error messages', t => {
 
 test('Custom prefix is added to error messages', t => {
   const customPrefix = '💥'
-  flipOut.setPrefix(customPrefix)
+  flip.setPrefix(customPrefix)
 
   try {
     throw new Error('This is a test error with custom prefix!')
@@ -27,7 +27,7 @@ test('Custom prefix is added to error messages', t => {
 })
 
 test('Error flipper can be disabled', t => {
-  flipOut.disable()
+  flip.disable()
 
   try {
     throw new Error('This is a test error with flipper disabled!')
@@ -38,11 +38,11 @@ test('Error flipper can be disabled', t => {
 
 test('Error flipper can be re-enabled after being disabled', t => {
   // First disable
-  flipOut.disable()
+  flip.disable()
 
   // Then re-enable
-  flipOut.enable()
-  flipOut.resetPrefix()
+  flip.enable()
+  flip.resetPrefix()
 
   try {
     throw new Error('This is a test error after re-enabling!')
@@ -84,7 +84,7 @@ test('Different error types are modified with prefix', t => {
 })
 
 test('Empty prefix falls back to default', t => {
-  flipOut.setPrefix()
+  flip.setPrefix()
 
   try {
     throw new Error('This is a test error!')

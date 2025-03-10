@@ -1,4 +1,4 @@
-# Flip Out
+# Flip On Fail
 
 > Turn your boring errors into expressive outbursts (╯°□°)╯︵ ┻━┻
 
@@ -7,20 +7,20 @@ A JavaScript package that adds fun prefixes to error messages.
 ## Installation
 
 ```bash
-npm install flip-out
+npm install flip-on-fail
 ```
 
 Or using Yarn:
 
 ```bash
-yarn add flip-out
+yarn add flip-on-fail
 ```
 
 ## Usage
 
 ```javascript
 // Import the package at the entry point of your application
-import flipOut from 'flip-out'
+import flip from 'flip-on-fail'
 
 // Will throw: (╯°□°)╯︵ ┻━┻ This is an error!
 throw new Error('This is an error!')
@@ -32,7 +32,7 @@ You can set a custom prefix for your error messages:
 
 ```javascript
 // Set a custom prefix
-flipOut.setPrefix('💥')
+flip.setPrefix('💥')
 
 // Will throw: 💥 This is an error!
 throw new Error('This is an error!')
@@ -51,7 +51,7 @@ You can also reset to the default prefix by:
 
 ```javascript
 // Set a custom prefix
-flipOut.resetPrefix()
+flip.resetPrefix()
 ```
 
 ### Disabling/Enabling
@@ -60,13 +60,13 @@ You can temporarily disable or re-enable error flipping:
 
 ```javascript
 // Disable error flipping
-flipOut.disable()
+flip.disable()
 
 // Will throw: This is an error! (without prefix)
 throw new Error('This is an error!')
 
 // Re-enable error flipping
-flipOut.enable()
+flip.enable()
 
 // Will throw: (╯°□°)╯︵ ┻━┻ This is an error!
 throw new Error('This is an error!')
@@ -83,4 +83,4 @@ This project is intended as a light-hearted joke and should be used for fun. It 
 
 ## License
 
-Copyright (c) Marc Anguera Insa. Flip Out is released under the [MIT License](LICENSE).
+Copyright (c) Marc Anguera Insa. `Flip On Fail` is released under the [MIT License](LICENSE).
