@@ -2,6 +2,7 @@
   "name": "flip-on-fail",
   "version": "1.0.0",
   "description": "Turn your boring errors into expressive outbursts (╯°□°)╯︵ ┻━┻",
+  "repository": "markets/flip-on-fail",
   "type": "module",
   "scripts": {
     "test": "ava"

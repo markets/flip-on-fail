@@ -1,5 +1,8 @@
 # Flip On Fail
 
+[![](https://github.com/markets/flip-on-fail/actions/workflows/ci.yml/badge.svg)](https://github.com/markets/flip-on-fail/actions/workflows/ci.yml)
+[![](https://img.shields.io/npm/v/flip-on-fail.svg)](https://www.npmjs.com/package/flip-on-fail)
+
 > Turn your boring errors into expressive outbursts (╯°□°)╯︵ ┻━┻
 
 A JavaScript package that adds fun prefixes to error messages. Designed to run seamlessly in both browser environments and Node.js.

@@ -27,8 +27,7 @@ test('Custom prefix is added to error messages', t => {
 })
 
 test('Empty prefix falls back to default', t => {
-  flip.setPrefix('💥')
-  flip.resetPrefix()
+  flip.setPrefix()
 
   try {
     throw new Error('This is a test error!')
@@ -53,7 +52,6 @@ test('Error flipper can be re-enabled after being disabled', t => {
 
   // Then re-enable
   flip.enable()
-  flip.resetPrefix()
 
   try {
     throw new Error('This is a test error after re-enabling!')
