@@ -31,29 +31,29 @@ throw new Error('This is an error!')
 
 ### Customizing the prefix
 
-You can set a custom prefix for your error messages:
+You can define a custom prefix for your error messages. Maybe you like emojis too?
 
 ```javascript
-// Set a custom prefix
 flip.setPrefix('💥')
 
 // Will throw: 💥 This is an error!
 throw new Error('This is an error!')
 ```
 
-If you like the original ASCII art, here are some alternative "table flippers" for inspiration:
+But if you prefer the original ASCII art (you probably do!), here are some alternative "table flippers" for inspiration:
 - (ﾉಥ益ಥ）ﾉ ┻━┻
 - (╯'□')╯︵ ┻━┻
 - ┻━┻ ︵ヽ(`Д´)ﾉ︵ ┻━┻
-- (┛ಠ_ಠ)┛彡 ┻━┻
+- (┛ಠ_ಠ)┛ 彡 ┻━┻
+- (╯ರ ~ ರ）╯︵ ┻━┻
 - (/¯◡ ‿ ◡)/¯ ~ ┻━┻
 - (┛◉Д◉)┛彡 ┻━┻
 - (╯°.°）╯ ┻━┻
+- (┛✧ω✧)┛ 彡 ┻━┻
 
-You can also reset to the default prefix by:
+You are also able to come back to the default prefix by:
 
 ```javascript
-// Reset to the default prefix
 flip.resetPrefix()
 ```
 
