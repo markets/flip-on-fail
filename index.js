@@ -19,6 +19,9 @@ const OriginalReferenceError = ReferenceError
 const OriginalRangeError = RangeError
 const OriginalURIError = URIError
 
+// Store the original console.error function
+const OriginalConsoleError = console.error
+
 // Factory to create error constructor overrides
 const createErrorWrapper = (OriginalErrorType) => {
   function WrappedError(...args) {
@@ -33,8 +36,8 @@ const createErrorWrapper = (OriginalErrorType) => {
     // Maintain the correct prototype chain
     Object.setPrototypeOf(error, Object.getPrototypeOf(this))
 
-    // Capture stack trace
-    if (Error.captureStackTrace) {
+    // Capture stack trace if the function exists
+    if (typeof Error.captureStackTrace === 'function') {
       Error.captureStackTrace(error, WrappedError)
     }
 
@@ -52,6 +55,22 @@ const createErrorWrapper = (OriginalErrorType) => {
   })
 
   return WrappedError
+}
+
+// Console.error wrapper function
+const wrappedConsoleError = function(...args) {
+  if (config.enabled && args.length > 0) {
+    const firstArg = args[0];
+    // If the first argument is a string, prepend our prefix
+    if (typeof firstArg === 'string') {
+      args[0] = `${config.prefix} ${firstArg}`;
+    }
+    // If the first argument is an Error object, let's not modify it here
+    // as it's already handled by our Error wrapper
+  }
+
+  // Call the original console.error with the modified arguments
+  OriginalConsoleError.apply(console, args);
 }
 
 // Create wrapped error constructors
@@ -72,6 +91,9 @@ const enable = () => {
   globalObject.ReferenceError = WrappedReferenceError
   globalObject.RangeError = WrappedRangeError
   globalObject.URIError = WrappedURIError
+
+  // Apply console.error wrapper
+  console.error = wrappedConsoleError
 }
 
 // Function to disable the error flipper
@@ -84,6 +106,9 @@ const disable = () => {
   globalObject.ReferenceError = OriginalReferenceError
   globalObject.RangeError = OriginalRangeError
   globalObject.URIError = OriginalURIError
+
+  // Restore original console.error
+  console.error = OriginalConsoleError
 }
 
 // Function to customize the prefix with default parameter
