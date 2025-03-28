@@ -57,20 +57,19 @@ const createErrorWrapper = (OriginalErrorType) => {
   return WrappedError
 }
 
-// Console.error wrapper function
+// console.error wrapper function
 const wrappedConsoleError = function(...args) {
   if (config.enabled && args.length > 0) {
-    const firstArg = args[0];
+    const firstArg = args[0]
+
     // If the first argument is a string, prepend our prefix
     if (typeof firstArg === 'string') {
-      args[0] = `${config.prefix} ${firstArg}`;
+      args[0] = `${config.prefix} ${firstArg}`
     }
-    // If the first argument is an Error object, let's not modify it here
-    // as it's already handled by our Error wrapper
   }
 
   // Call the original console.error with the modified arguments
-  OriginalConsoleError.apply(console, args);
+  OriginalConsoleError.apply(console, args)
 }
 
 // Create wrapped error constructors

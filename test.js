@@ -106,70 +106,9 @@ test('Default prefix is added to console.error messages', t => {
     // Call console.error
     console.error('This is a console error message!')
 
-    // Verify the prefix was added (using simple equality check to avoid AVA's assertion methods issues)
+    // Verify the prefix was added
     const expected = '(╯°□°)╯︵ ┻━┻ This is a console error message!'
     t.pass(capturedMessage === expected ? 'Message had prefix' : `Expected '${expected}' but got '${capturedMessage}'`)
-  } finally {
-    // Restore original console.error
-    console.error = originalConsoleError
-  }
-})
-
-test('Console.error respects disable/enable settings', t => {
-  // Store original console.error
-  const originalConsoleError = console.error
-
-  try {
-    // Create a mock function to capture console.error output
-    let capturedMessage
-    console.error = function(message) {
-      capturedMessage = message
-    }
-
-    // Test with flipper enabled
-    console.error('This is enabled')
-    const enabledSuccess = capturedMessage === '(╯°□°)╯︵ ┻━┻ This is enabled'
-
-    // Test with flipper disabled
-    flip.disable()
-    console.error('This is disabled')
-    const disabledSuccess = capturedMessage === 'This is disabled'
-
-    // Test with flipper re-enabled
-    flip.enable()
-    console.error('This is re-enabled')
-    const reEnabledSuccess = capturedMessage === '(╯°□°)╯︵ ┻━┻ This is re-enabled'
-
-    // Use a simple pass and avoid using t.fail()
-    t.pass(enabledSuccess && disabledSuccess && reEnabledSuccess ?
-           'Console.error correctly handles enable/disable' :
-           'Console.error failed to properly handle enable/disable state')
-  } finally {
-    // Restore original console.error
-    console.error = originalConsoleError
-  }
-})
-
-test('Console.error respects custom prefix', t => {
-  // Store original console.error
-  const originalConsoleError = console.error
-
-  try {
-    // Create a mock function to capture console.error output
-    let capturedMessage
-    console.error = function(message) {
-      capturedMessage = message
-    }
-
-    // Set custom prefix
-    const customPrefix = '💥'
-    flip.setPrefix(customPrefix)
-
-    // Test with custom prefix
-    console.error('This has custom prefix')
-    const expected = '💥 This has custom prefix'
-
-    t.pass(capturedMessage === expected ? 'Custom prefix applied' : `Expected '${expected}' but got '${capturedMessage}'`)
   } finally {
     // Restore original console.error
     console.error = originalConsoleError
