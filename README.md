@@ -27,7 +27,11 @@ import flip from 'flip-on-fail'
 
 // Will throw: (╯°□°)╯︵ ┻━┻ This is an error!
 throw new Error('This is an error!')
+```
 
+You can also flip when using `console.error`, making debugging even funnier!
+
+```javascript
 // Will throw: (╯°□°)╯︵ ┻━┻ This is a console error message!
 console.error('This is a console error message!')
 ```
