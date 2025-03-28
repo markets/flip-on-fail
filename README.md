@@ -29,6 +29,13 @@ import flip from 'flip-on-fail'
 throw new Error('This is an error!')
 ```
 
+You can also flip when using `console.error`, making debugging even funnier!
+
+```javascript
+// Will throw: (╯°□°)╯︵ ┻━┻ This is a console error message!
+console.error('This is a console error message!')
+```
+
 ### Customizing the prefix
 
 You can define a custom prefix for your error messages. Maybe you like emojis too?

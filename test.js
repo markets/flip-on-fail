@@ -91,3 +91,26 @@ test('Different error types are modified with prefix', t => {
     t.is(e.message, '(╯°□°)╯︵ ┻━┻ This is a uri error!')
   }
 })
+
+test('Default prefix is added to console.error messages', t => {
+  // Store original console.error
+  const originalConsoleError = console.error
+
+  try {
+    // Capture what's being logged but don't output during test
+    let capturedMessage
+    console.error = function(message) {
+      capturedMessage = message
+    }
+
+    // Call console.error
+    console.error('This is a console error message!')
+
+    // Verify the prefix was added
+    const expected = '(╯°□°)╯︵ ┻━┻ This is a console error message!'
+    t.pass(capturedMessage === expected ? 'Message had prefix' : `Expected '${expected}' but got '${capturedMessage}'`)
+  } finally {
+    // Restore original console.error
+    console.error = originalConsoleError
+  }
+})
