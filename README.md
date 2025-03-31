@@ -29,7 +29,7 @@ import flip from 'flip-on-fail'
 throw new Error('This is an error!')
 ```
 
-You can also flip when using `console.error`, making debugging even funnier!
+Flips are also enabled when using `console.error`, because who doesn't love a dramatic table flip during debugging?
 
 ```javascript
 // Will throw: (╯°□°)╯︵ ┻━┻ This is a console error message!
@@ -47,7 +47,7 @@ flip.setPrefix('💥')
 throw new Error('This is an error!')
 ```
 
-But if you prefer the original ASCII art (you probably do!), here are some alternative "table flippers" for inspiration:
+But if you prefer the original ASCII art (you probably do!), here are some alternative table flippers for inspiration:
 - (ﾉಥ益ಥ）ﾉ ┻━┻
 - (╯'□')╯︵ ┻━┻
 - ┻━┻ ︵ヽ(`Д´)ﾉ︵ ┻━┻
