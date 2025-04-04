@@ -48,6 +48,7 @@ throw new Error('This is an error!')
 ```
 
 But if you prefer the original ASCII art (you probably do!), here are some alternative table flippers for inspiration:
+
 - (ﾉಥ益ಥ）ﾉ ┻━┻
 - (╯'□')╯︵ ┻━┻
 - ┻━┻ ︵ヽ(`Д´)ﾉ︵ ┻━┻
@@ -58,7 +59,11 @@ But if you prefer the original ASCII art (you probably do!), here are some alter
 - (╯°.°）╯ ┻━┻
 - (┛✧ω✧)┛ 彡 ┻━┻
 
-You are also able to come back to the default prefix by:
+```javascript
+flip.setPrefix('┻━┻ ︵ヽ(`Д´)ﾉ︵ ┻━┻')
+```
+
+At this point you probably messed up enough with the prefix. You can come back to the default one by:
 
 ```javascript
 flip.resetPrefix()
