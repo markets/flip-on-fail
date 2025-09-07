@@ -5,7 +5,7 @@
   "repository": "markets/flip-on-fail",
   "type": "module",
   "scripts": {
-    "test": "ava"
+    "test": "node --test test.js"
   },
   "keywords": [
     "error",
@@ -14,8 +14,5 @@
     "ascii-art"
   ],
   "author": "Marc Anguera Insa @markets",
-  "license": "MIT",
-  "devDependencies": {
-    "ava": "^6.2.0"
-  }
+  "license": "MIT"
 }
