@@ -109,10 +109,10 @@ test('Default prefix is added to console.error messages', () => {
       capturedOutput += chunk
       return true
     }
-    
+
     // Call console.error (which should be the wrapped version)
     console.error('This is a console error message!')
-    
+
     // Verify the prefix was added to the output
     const expected = '(╯°□°)╯︵ ┻━┻ This is a console error message!'
     assert.ok(capturedOutput.includes(expected), `Expected output to contain '${expected}' but got '${capturedOutput}'`)
