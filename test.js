@@ -2,7 +2,6 @@ import { test, beforeEach } from 'node:test'
 import assert from 'node:assert'
 import flip from './index.js'
 
-// Helper to reset state before each test
 beforeEach(() => {
   flip.enable()
   flip.resetPrefix()

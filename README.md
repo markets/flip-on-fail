@@ -2,6 +2,7 @@
 
 [![](https://github.com/markets/flip-on-fail/actions/workflows/ci.yml/badge.svg)](https://github.com/markets/flip-on-fail/actions/workflows/ci.yml)
 [![](https://img.shields.io/npm/v/flip-on-fail.svg)](https://www.npmjs.com/package/flip-on-fail)
+[![](https://qlty.sh/gh/markets/projects/flip-on-fail/maintainability.svg)](https://qlty.sh/gh/markets/projects/flip-on-fail)
 
 > Turn your boring errors into expressive outbursts (╯°□°)╯︵ ┻━┻
 
